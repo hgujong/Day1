@@ -10,7 +10,7 @@ import SwiftUI
 struct AddNewTask: View {
     @ObservedObject var model: ViewModel
     // MARK: All Environment Values in one variable
-    @Environment(\.self) var env
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack(spacing: 12) {
@@ -19,12 +19,26 @@ struct AddNewTask: View {
                 .frame(maxWidth: .infinity)
                 .overlay(alignment: .leading) {
                     Button {
-                        env.dismiss
+                        model.openEditTask = false
                     } label: {
                         Image(systemName: "arrow.left")
                             .font(.title3)
                             .foregroundColor(.black)
                     }
+                }
+                .overlay(alignment: .trailing){
+                    Button {
+                        if let editTast = model.editTask {
+                            context.delete(editTast)
+                            try? context.save()
+                            model.openEditTask = false
+                        }
+                    } label: {
+                        Image(systemName: "trash")
+                            .font(.title3)
+                            .foregroundColor(.red)
+                    }
+                    .opacity(model.editTask == nil ? 0 : 1)
                 }
             
             VStack(alignment: .leading, spacing: 12) {
@@ -67,7 +81,7 @@ struct AddNewTask: View {
                     .font(.caption)
                     .foregroundColor(.gray)
                 
-                Text(model.taskDeadline.formatted(date: .abbreviated, time: .omitted))
+                Text(model.currentDay.formatted(date: .abbreviated, time: .omitted))
                     .padding(.top, 10)
                     .font(.callout)
                     .fontWeight(.semibold)
@@ -90,7 +104,7 @@ struct AddNewTask: View {
                     .font(.caption)
                     .foregroundColor(.gray)
                 
-                TextField("", text: $model.taskTitle)
+                TextField("", text: $model.content)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 10)
             }
@@ -99,7 +113,9 @@ struct AddNewTask: View {
             
             // MARK: Save Button
             Button{
-                
+                if model.addData(context: context){
+                    model.openEditTask = false
+                }
             } label: {
                 Text("Save")
                     .font(.callout)

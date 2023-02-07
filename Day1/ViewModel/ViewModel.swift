@@ -13,8 +13,11 @@ class ViewModel: ObservableObject{
     @Published var content = ""
     @Published var date = Date()
     @Published var color: String = "Yellow"
-    @Published var taskDeadline: Date = Date()
     @Published var taskTitle: String = ""
+    @Published var openEditTask: Bool = false
+
+    // MARK: Editing Existing Task Data
+    @Published var editTask: Task?
     
     @Published var isNewData = false
     
@@ -89,6 +92,45 @@ class ViewModel: ObservableObject{
         
         
     }
+    
+    
+    // 새로운 모델
+    
+    func addData(context: NSManagedObjectContext)->Bool {
+        // MARK: Updating Existing Date in Core Data
+        var task: Task!
+        if let editTask = editTask{
+            task = editTask
+        } else{
+            task = Task(context: context)
+        }
+        task.content = content
+        task.color = color
+        task.deadline = Calendar.current.startOfDay(for: currentDay).addingTimeInterval(86399)//currentDay
+        task.isCompleted = false
+        
+        if let _ = try? context.save(){
+            return true
+        }
+        return false
+    }
+    
+    func resetData(){
+        color = "Yellow"
+        date = Date()
+        content = ""
+        
+    }
+    
+    func setupTask(){
+        if let editTask = editTask{
+            color = editTask.color ?? "Yellow"
+            content = editTask.content ?? ""
+            currentDay = editTask.deadline  ?? Date()
+        }
+    }
+    
+    
     
     // ---------------------------------
     // Current Week Fetch
