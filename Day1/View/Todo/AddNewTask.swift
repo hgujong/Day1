@@ -24,7 +24,7 @@ struct AddNewTask: View {
                     } label: {
                         Image(systemName: "arrow.left")
                             .font(.title3)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("ThemeColor"))
                     }
                 }
                 .overlay(alignment: .trailing){
@@ -94,7 +94,7 @@ struct AddNewTask: View {
                     
                 } label: {
                     Image(systemName: "calendar")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
             }
             

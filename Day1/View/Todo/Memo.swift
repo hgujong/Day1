@@ -57,7 +57,7 @@ struct Memo: View {
                             
                         }
                         .foregroundStyle(model.isToday(date: day) ? .primary : .secondary)
-                        .foregroundColor(model.isToday(date: day) ? .white : .black)
+                        .foregroundColor(model.isToday(date: day) ? .white : .gray)
                         .frame(width: 48, height: 90)
                         .background(
                             
