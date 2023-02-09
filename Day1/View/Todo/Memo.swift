@@ -144,6 +144,7 @@ struct Memo: View {
             HStack {
                 Text("Todo")
                     .font(.callout)
+                    .fontWeight(.bold)
                     .padding(.vertical, 5)
                     .padding(.horizontal)
                     .foregroundColor(.white)
@@ -202,7 +203,7 @@ struct Memo: View {
                         try? context.save()
                     } label: {
                         Circle()
-                            .strokeBorder(.black, lineWidth: 1.5)
+                            .strokeBorder(.white, lineWidth: 1.5)
                             .frame(width: 25, height: 25)
                             .contentShape(Circle())
                     }
@@ -220,7 +221,7 @@ struct Memo: View {
     // MARK: Custom Segmented Bar
     @ViewBuilder
     func CustomSegmentedBar() -> some View {
-        let tabs = ["Today", "Failed", "Task Done"]
+        let tabs = ["Todo", "Failed", "Task Done"]
         HStack(spacing: 10) {
             ForEach(tabs, id: \.self) { tab in
                 Text(tab)

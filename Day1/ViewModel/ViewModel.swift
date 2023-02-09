@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 class ViewModel: ObservableObject{
-    @Published var currentTab: String = "Today"
+    @Published var currentTab: String = "Todo"
     @Published var content = ""
     @Published var date = Date()
     @Published var color: String = "Yellow"

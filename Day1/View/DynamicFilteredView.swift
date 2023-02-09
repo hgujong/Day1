@@ -20,7 +20,7 @@ struct DynamicFilteredView<Content: View,T>: View where T: NSManagedObject {
         // MARK: Predicate to Filter current date Tasks
         let calendar = Calendar.current
         var predicate: NSPredicate!
-        if currentTab == "Today"{
+        if currentTab == "Todo"{
             let currentDay = calendar.startOfDay(for: model.currentDay)
             let today = calendar.startOfDay(for: Date())
             let tomorrow = calendar.date(byAdding: .day, value: 1, to: currentDay)!
@@ -43,7 +43,6 @@ struct DynamicFilteredView<Content: View,T>: View where T: NSManagedObject {
             predicate = NSPredicate(format: "%@ < %@ AND \(filterKey) < %@ AND isCompleted == %i", argumentArray: [currentDay, today, today, 0])
         }else{
             let currentDay = calendar.startOfDay(for: model.currentDay)
-            let today = calendar.startOfDay(for: Date())
             let tomorrow = calendar.date(byAdding: .day, value: 1, to: currentDay)!
             
             //Filter Key

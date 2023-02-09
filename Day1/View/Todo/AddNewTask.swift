@@ -16,6 +16,7 @@ struct AddNewTask: View {
         VStack(spacing: 12) {
             Text("Edit task")
                 .font(.title3.bold())
+                .foregroundColor(Color("ThemeColor"))
                 .frame(maxWidth: .infinity)
                 .overlay(alignment: .leading) {
                     Button {
@@ -125,7 +126,7 @@ struct AddNewTask: View {
                     .foregroundColor(.white)
                     .background{
                         Capsule()
-                            .fill(.black)
+                            .fill(Color("ThemeColor"))
                     }
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
