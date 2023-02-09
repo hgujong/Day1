@@ -22,6 +22,12 @@
 		4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66244829921957005D89B6 /* DynamicFilteredView.swift */; };
 		4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA810E22990C46B009E2D40 /* AddNewTask.swift */; };
 		4BC524BC29937F5B008B7C84 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC524BB29937F5B008B7C84 /* NotificationManager.swift */; };
+		5B05F1722994DB200023AB04 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1702994DB200023AB04 /* Step.swift */; };
+		5B05F1732994DB200023AB04 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1712994DB200023AB04 /* Ring.swift */; };
+		5B05F1792994DB260023AB04 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1752994DB260023AB04 /* Log.swift */; };
+		5B05F17A2994DB260023AB04 /* RingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1762994DB260023AB04 /* RingCardView.swift */; };
+		5B05F17B2994DB260023AB04 /* LogBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1772994DB260023AB04 /* LogBackground.swift */; };
+		5B05F17C2994DB260023AB04 /* StepsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05F1782994DB260023AB04 /* StepsGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,12 @@
 		4B66244829921957005D89B6 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		4BA810E22990C46B009E2D40 /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
 		4BC524BB29937F5B008B7C84 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5B05F1702994DB200023AB04 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		5B05F1712994DB200023AB04 /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		5B05F1752994DB260023AB04 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		5B05F1762994DB260023AB04 /* RingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingCardView.swift; sourceTree = "<group>"; };
+		5B05F1772994DB260023AB04 /* LogBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogBackground.swift; sourceTree = "<group>"; };
+		5B05F1782994DB260023AB04 /* StepsGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 		4B14BD0E298B79360095EC39 /* Day1 */ = {
 			isa = PBXGroup;
 			children = (
+				5B05F16E2994DAF60023AB04 /* Log */,
 				4B14BD24298B79D60095EC39 /* ViewModel */,
 				4B14BD25298B79E10095EC39 /* View */,
 				4B14BD0F298B79360095EC39 /* Day1App.swift */,
@@ -138,6 +151,37 @@
 				4B14BD33298B82510095EC39 /* Analysis.swift */,
 			);
 			path = Analysis;
+			sourceTree = "<group>";
+		};
+		5B05F16E2994DAF60023AB04 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				5B05F1742994DB260023AB04 /* View */,
+				5B05F16F2994DB200023AB04 /* Model */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		5B05F16F2994DB200023AB04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B05F1702994DB200023AB04 /* Step.swift */,
+				5B05F1712994DB200023AB04 /* Ring.swift */,
+			);
+			name = Model;
+			path = "../../../../Desktop/22-Winter/TaskApp/TaskApp/Log/Model";
+			sourceTree = "<group>";
+		};
+		5B05F1742994DB260023AB04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B05F1752994DB260023AB04 /* Log.swift */,
+				5B05F1762994DB260023AB04 /* RingCardView.swift */,
+				5B05F1772994DB260023AB04 /* LogBackground.swift */,
+				5B05F1782994DB260023AB04 /* StepsGraphView.swift */,
+			);
+			name = View;
+			path = "../../../../Desktop/22-Winter/TaskApp/TaskApp/Log/View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +256,16 @@
 			files = (
 				4B14BD31298B81AD0095EC39 /* Setting.swift in Sources */,
 				4B14BD2A298B7AA00095EC39 /* Memo.swift in Sources */,
+				5B05F17A2994DB260023AB04 /* RingCardView.swift in Sources */,
 				4B14BD1C298B79380095EC39 /* Day1.xcdatamodeld in Sources */,
+				5B05F1722994DB200023AB04 /* Step.swift in Sources */,
 				4B14BD19298B79380095EC39 /* Persistence.swift in Sources */,
 				4B14BD34298B82510095EC39 /* Analysis.swift in Sources */,
+				5B05F1792994DB260023AB04 /* Log.swift in Sources */,
+				5B05F17B2994DB260023AB04 /* LogBackground.swift in Sources */,
 				4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */,
+				5B05F17C2994DB260023AB04 /* StepsGraphView.swift in Sources */,
+				5B05F1732994DB200023AB04 /* Ring.swift in Sources */,
 				4B14BD23298B79C00095EC39 /* Home.swift in Sources */,
 				4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */,
 				4B14BD12298B79360095EC39 /* ContentView.swift in Sources */,
