@@ -16,11 +16,12 @@
 		4B14BD23298B79C00095EC39 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD22298B79C00095EC39 /* Home.swift */; };
 		4B14BD27298B79ED0095EC39 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD26298B79ED0095EC39 /* ViewModel.swift */; };
 		4B14BD2A298B7AA00095EC39 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD29298B7AA00095EC39 /* Memo.swift */; };
-		4B14BD2C298B7AD90095EC39 /* NewDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD2B298B7AD90095EC39 /* NewDataView.swift */; };
 		4B14BD2E298B7B0A0095EC39 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD2D298B7B0A0095EC39 /* DateButton.swift */; };
 		4B14BD31298B81AD0095EC39 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD30298B81AD0095EC39 /* Setting.swift */; };
 		4B14BD34298B82510095EC39 /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD33298B82510095EC39 /* Analysis.swift */; };
+		4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66244829921957005D89B6 /* DynamicFilteredView.swift */; };
 		4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA810E22990C46B009E2D40 /* AddNewTask.swift */; };
+		4BC524BC29937F5B008B7C84 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC524BB29937F5B008B7C84 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +35,12 @@
 		4B14BD22298B79C00095EC39 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4B14BD26298B79ED0095EC39 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4B14BD29298B7AA00095EC39 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
-		4B14BD2B298B7AD90095EC39 /* NewDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataView.swift; sourceTree = "<group>"; };
 		4B14BD2D298B7B0A0095EC39 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
 		4B14BD30298B81AD0095EC39 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		4B14BD33298B82510095EC39 /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		4B66244829921957005D89B6 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		4BA810E22990C46B009E2D40 /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
+		4BC524BB29937F5B008B7C84 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		4B14BD25298B79E10095EC39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B66244829921957005D89B6 /* DynamicFilteredView.swift */,
 				4B14BD22298B79C00095EC39 /* Home.swift */,
 				4B14BD28298B7A910095EC39 /* Todo */,
 				4B14BD32298B82370095EC39 /* Analysis */,
@@ -115,7 +118,6 @@
 			children = (
 				4B14BD29298B7AA00095EC39 /* Memo.swift */,
 				4BA810E22990C46B009E2D40 /* AddNewTask.swift */,
-				4B14BD2B298B7AD90095EC39 /* NewDataView.swift */,
 				4B14BD2D298B7B0A0095EC39 /* DateButton.swift */,
 			);
 			path = Todo;
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4B14BD30298B81AD0095EC39 /* Setting.swift */,
+				4BC524BB29937F5B008B7C84 /* NotificationManager.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -213,12 +216,13 @@
 				4B14BD19298B79380095EC39 /* Persistence.swift in Sources */,
 				4B14BD34298B82510095EC39 /* Analysis.swift in Sources */,
 				4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */,
-				4B14BD2C298B7AD90095EC39 /* NewDataView.swift in Sources */,
 				4B14BD23298B79C00095EC39 /* Home.swift in Sources */,
+				4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */,
 				4B14BD12298B79360095EC39 /* ContentView.swift in Sources */,
 				4B14BD27298B79ED0095EC39 /* ViewModel.swift in Sources */,
 				4B14BD10298B79360095EC39 /* Day1App.swift in Sources */,
 				4B14BD2E298B7B0A0095EC39 /* DateButton.swift in Sources */,
+				4BC524BC29937F5B008B7C84 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Day1/Preview Content\"";
+				DEVELOPMENT_TEAM = MXVYLJF6AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -375,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Day1/Preview Content\"";
+				DEVELOPMENT_TEAM = MXVYLJF6AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

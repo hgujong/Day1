@@ -28,6 +28,7 @@ struct Home: View {
                     Label("Setting", systemImage: "gear")
                 }
         }
+        .accentColor(Color("ThemeColor"))
     }
 }
 
