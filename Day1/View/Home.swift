@@ -18,7 +18,7 @@ struct Home: View {
                     Label("Todo", systemImage: "checklist")
                 }
             
-            Analysis(model: model)
+            Log()
                 .tabItem {
                     Label("Analyis", systemImage: "chart.bar.xaxis")
                 }
