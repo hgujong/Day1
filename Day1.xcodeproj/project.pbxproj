@@ -20,6 +20,12 @@
 		4B14BD31298B81AD0095EC39 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD30298B81AD0095EC39 /* Setting.swift */; };
 		4B14BD34298B82510095EC39 /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14BD33298B82510095EC39 /* Analysis.swift */; };
 		4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66244829921957005D89B6 /* DynamicFilteredView.swift */; };
+		4B9056422994E0620007BC5F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90563B2994E0610007BC5F /* Step.swift */; };
+		4B9056432994E0620007BC5F /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90563C2994E0610007BC5F /* Ring.swift */; };
+		4B9056442994E0620007BC5F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90563E2994E0610007BC5F /* Log.swift */; };
+		4B9056452994E0620007BC5F /* RingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90563F2994E0610007BC5F /* RingCardView.swift */; };
+		4B9056462994E0620007BC5F /* LogBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9056402994E0610007BC5F /* LogBackground.swift */; };
+		4B9056472994E0620007BC5F /* StepsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9056412994E0610007BC5F /* StepsGraphView.swift */; };
 		4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA810E22990C46B009E2D40 /* AddNewTask.swift */; };
 		4BC524BC29937F5B008B7C84 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC524BB29937F5B008B7C84 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +45,12 @@
 		4B14BD30298B81AD0095EC39 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		4B14BD33298B82510095EC39 /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
 		4B66244829921957005D89B6 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
+		4B90563B2994E0610007BC5F /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		4B90563C2994E0610007BC5F /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		4B90563E2994E0610007BC5F /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4B90563F2994E0610007BC5F /* RingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingCardView.swift; sourceTree = "<group>"; };
+		4B9056402994E0610007BC5F /* LogBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogBackground.swift; sourceTree = "<group>"; };
+		4B9056412994E0610007BC5F /* StepsGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsGraphView.swift; sourceTree = "<group>"; };
 		4BA810E22990C46B009E2D40 /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
 		4BC524BB29937F5B008B7C84 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +85,7 @@
 		4B14BD0E298B79360095EC39 /* Day1 */ = {
 			isa = PBXGroup;
 			children = (
+				4B9056392994E0610007BC5F /* Log */,
 				4B14BD24298B79D60095EC39 /* ViewModel */,
 				4B14BD25298B79E10095EC39 /* View */,
 				4B14BD0F298B79360095EC39 /* Day1App.swift */,
@@ -138,6 +151,35 @@
 				4B14BD33298B82510095EC39 /* Analysis.swift */,
 			);
 			path = Analysis;
+			sourceTree = "<group>";
+		};
+		4B9056392994E0610007BC5F /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				4B90563A2994E0610007BC5F /* Model */,
+				4B90563D2994E0610007BC5F /* View */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		4B90563A2994E0610007BC5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B90563B2994E0610007BC5F /* Step.swift */,
+				4B90563C2994E0610007BC5F /* Ring.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B90563D2994E0610007BC5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B90563E2994E0610007BC5F /* Log.swift */,
+				4B90563F2994E0610007BC5F /* RingCardView.swift */,
+				4B9056402994E0610007BC5F /* LogBackground.swift */,
+				4B9056412994E0610007BC5F /* StepsGraphView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +254,16 @@
 			files = (
 				4B14BD31298B81AD0095EC39 /* Setting.swift in Sources */,
 				4B14BD2A298B7AA00095EC39 /* Memo.swift in Sources */,
+				4B9056452994E0620007BC5F /* RingCardView.swift in Sources */,
 				4B14BD1C298B79380095EC39 /* Day1.xcdatamodeld in Sources */,
+				4B9056422994E0620007BC5F /* Step.swift in Sources */,
 				4B14BD19298B79380095EC39 /* Persistence.swift in Sources */,
 				4B14BD34298B82510095EC39 /* Analysis.swift in Sources */,
+				4B9056442994E0620007BC5F /* Log.swift in Sources */,
+				4B9056462994E0620007BC5F /* LogBackground.swift in Sources */,
 				4BA810E32990C46B009E2D40 /* AddNewTask.swift in Sources */,
+				4B9056472994E0620007BC5F /* StepsGraphView.swift in Sources */,
+				4B9056432994E0620007BC5F /* Ring.swift in Sources */,
 				4B14BD23298B79C00095EC39 /* Home.swift in Sources */,
 				4B66244929921957005D89B6 /* DynamicFilteredView.swift in Sources */,
 				4B14BD12298B79360095EC39 /* ContentView.swift in Sources */,

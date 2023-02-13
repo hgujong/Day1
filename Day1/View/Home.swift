@@ -18,7 +18,8 @@ struct Home: View {
                     Label("Todo", systemImage: "checklist")
                 }
             
-            Analysis(model: model)
+//            Analysis(model: model)
+            LogBackground()
                 .tabItem {
                     Label("Analyis", systemImage: "chart.bar.xaxis")
                 }
@@ -30,6 +31,7 @@ struct Home: View {
         }
         .accentColor(Color("ThemeColor"))
     }
+    
 }
 
 struct Home_Previews: PreviewProvider {

@@ -49,7 +49,7 @@ struct AddNewTask: View {
                 
                 // MARK: Sample Card Colors
                 let colors: [String] =
-                    ["Yellow", "Green", "Blue", "Purple", "Red", "Orange"]
+                    ["Color 1", "Color 2", "Color 3", "Color 4"]
                 
                 HStack(spacing: 15) {
                     ForEach(colors , id: \.self) { color in
