@@ -166,7 +166,7 @@ struct StopW: View {
 //                        model.sec = 0
 //                        model.addNewTimer = false
 //                    }
-
+  
                 NewTimerView()
                         .frame(maxHeight: .infinity, alignment: .bottom)
                         .offset(y:model.addNewTimer ? 0 : 400)
