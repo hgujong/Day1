@@ -86,7 +86,6 @@ struct Memo: View {
             }
             .padding()
             
-            
         }
         .overlay(alignment: .bottom){
             Button {
@@ -214,7 +213,7 @@ struct Memo: View {
         .frame(maxWidth: .infinity)
         .background{
             RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .fill(Color(task.color ?? "Yellow"))
+                .fill(Color(task.color ?? "Color 1"))
         }
     }
     
