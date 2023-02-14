@@ -17,9 +17,16 @@ struct Home: View {
                 .tabItem {
                     Label("Todo", systemImage: "checklist")
                 }
+            StopW(model: model)
+                .tabItem{
+                    Label("StopWatch", systemImage: "stopwatch")
+                }
+            StudyTimer(model: model)
+                .tabItem{
+                    Label("Timer", systemImage: "timer")
+                }
             
-//            Analysis(model: model)
-            LogBackground()
+            Analysis(model: model)
                 .tabItem {
                     Label("Analyis", systemImage: "chart.bar.xaxis")
                 }
