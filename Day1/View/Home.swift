@@ -17,23 +17,40 @@ struct Home: View {
                 .tabItem {
                     Label("Todo", systemImage: "checklist")
                 }
+                .onAppear {
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                }
+            
             StopW(model: model)
                 .tabItem{
                     Label("StopWatch", systemImage: "stopwatch")
                 }
+                .onAppear {
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                }
+            
             StudyTimer(model: model)
                 .tabItem{
                     Label("Timer", systemImage: "timer")
+                }
+                .onAppear {
+                    UIApplication.shared.applicationIconBadgeNumber = 0
                 }
             
             Analysis(model: model)
                 .tabItem {
                     Label("Analyis", systemImage: "chart.bar.xaxis")
                 }
+                .onAppear {
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                }
             
             Setting(model: model)
                 .tabItem {
-                    Label("Setting", systemImage: "gear")
+                    Label("Setting", systemImage: "gearshape")
+                }
+                .onAppear {
+                    UIApplication.shared.applicationIconBadgeNumber = 0
                 }
         }
         .accentColor(Color("ThemeColor"))

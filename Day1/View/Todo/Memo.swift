@@ -30,7 +30,7 @@ struct Memo: View {
                         .foregroundColor(Color("ThemeColor"))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical)
+//                .padding(.vertical)
                 
                 CustomSegmentedBar()
                     .padding(.top, 5)

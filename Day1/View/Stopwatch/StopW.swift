@@ -11,27 +11,21 @@ struct StopW: View {
     @ObservedObject var model: ViewModel
     var body: some View {
         VStack(){
-                Text("Stopwatch")
-                    .font(.title.bold())
-                    .foregroundColor(.white)
-                    .background{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color("ThemeColor"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .frame(width: 170)
-                    }
-                    .padding()
+            Text("Stopwatch")
+                .font(.title.bold())
+                .foregroundColor(Color("ThemeColor"))
     
             
             GeometryReader{proxy in
                 VStack(spacing: 10){
                     Text("목표시간")
                         .font(.title2.bold())
-                        .foregroundColor(.indigo)
+                        .foregroundColor(Color("ThemeColor"))
                         .padding(.top)
                     Text(model.setTimeStringValue)
                         .font(.system(size: 35, weight: .semibold))
                         .rotationEffect(.init(degrees: 0))
-                        .foregroundColor(.indigo)
+                        .foregroundColor(Color("ThemeColor"))
                         .opacity(model.progress <= 1 ? 0.5 : 1)
                         .animation(.none, value: model.setTimeStringValue)
                     
@@ -45,11 +39,11 @@ struct StopW: View {
                         
                         //그림자
                         Circle()
-                            .stroke(Color(.systemBlue),lineWidth: 7)
+                            .stroke(Color("ThemeColor"),lineWidth: 7)
                             .blur(radius: 15)
                         
                         Circle()
-                            .fill(Color(.white))
+                            .fill(.background)
                         
                         Circle()
                             .trim(from: 0, to: model.progress)
@@ -60,7 +54,7 @@ struct StopW: View {
                             let size = proxy.size
                             
                             Circle()
-                                .fill(Color(.systemBlue))
+                                .fill(Color("ThemeColor"))
                                 .frame(width: 30, height: 30)
                                 .overlay(content: {
                                     Circle()
@@ -78,6 +72,7 @@ struct StopW: View {
                             .rotationEffect(.init(degrees: 90))
                             .opacity(0.7)
                             .animation(.none, value: model.progress)
+                            .foregroundColor(Color("ThemeColor"))
                         
                     }
                     .padding(40)
@@ -94,7 +89,7 @@ struct StopW: View {
                     } label: {
                         Image(systemName: "arrow.triangle.2.circlepath" )
                             .font(.largeTitle.bold())
-                            //.foregroundColor(.black)
+                            .foregroundColor(Color("ThemeColor"))
                     }
                     .opacity(model.totalSec == 0 ? 0 : 1)
                     
@@ -115,9 +110,9 @@ struct StopW: View {
                                 .frame(width: 90, height: 90)
                                 .background{
                                     Circle()
-                                        .fill(.blue)
+                                        .fill(Color("ThemeColor"))
                                 }
-                                .shadow(color: Color(.systemBlue), radius: 8,x: 0, y: 0)
+                                .shadow(color: Color("ThemeColor"), radius: 8,x: 0, y: 0)
                         }
                         //MARK: stop and restart
                         Button{
@@ -136,9 +131,9 @@ struct StopW: View {
                                 .frame(width: 90, height: 90)
                                 .background{
                                     Circle()
-                                        .fill(.blue)
+                                        .fill(Color("ThemeColor"))
                                 }
-                                .shadow(color: Color(.systemBlue), radius: 8,x: 0, y: 0)
+                                .shadow(color: Color("ThemeColor"), radius: 8,x: 0, y: 0)
                         }
                         .opacity(model.totalSec == 0 ? 0 : 1)
                         
@@ -152,10 +147,10 @@ struct StopW: View {
             }
         }
         .padding()
-        .background{
-            Color(.white)
-                .ignoresSafeArea()
-        }
+//        .background{
+//            Color(.white)
+//                .ignoresSafeArea()
+//        }
         .overlay(content: {
             ZStack{
 //                Color.black
@@ -251,7 +246,7 @@ struct StopW: View {
                 Text("Save")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(.systemBlue))
+                    .foregroundColor(Color("ThemeColor"))
                     .padding(.vertical)
                     .padding(.horizontal,100)
                     .background{
@@ -267,7 +262,7 @@ struct StopW: View {
         .frame(maxWidth: .infinity)
         .background{
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(.systemBlue))
+                .fill(Color("ThemeColor"))
                 .ignoresSafeArea()
         }
     }
