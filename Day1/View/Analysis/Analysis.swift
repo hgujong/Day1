@@ -16,77 +16,72 @@ struct Analysis: View {
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
-        VStack(spacing: 20) {
-            
-            HStack{
-                Text("Analysis")
-                    .font(.system(size: 35))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .background{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color("ThemeColor"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .frame(width: 170)
-                    }
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 20) {
+                HStack(alignment: .top, spacing: 8){
+                    Text("Analysis")
+                        .font(.title.bold())
+                        .foregroundColor(Color("ThemeColor"))
+                    
+                    Spacer()
+                    //공부 목표 시간,쉬는 시간 편집
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "ellipsis.circle")
+                            .font(.title3)
+                    })
+                }
+                .foregroundColor(.blue)
                 
-                Spacer()
-                //공부 목표 시간,쉬는 시간 편집
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "ellipsis.circle")
-                        .font(.title3)
-                })
-            }
-            .foregroundColor(.blue)
-            
-            HStack(spacing: 10){
-                // MARK: 상단 날짜 버튼
-                ForEach(model.currentweek, id: \.self) { day in
-                    
-                    VStack(spacing: 10) {
+                HStack(spacing: 10){
+                    // MARK: 상단 날짜 버튼
+                    ForEach(model.currentweek, id: \.self) { day in
                         
-                        //날짜
-                        Text(model.extractDate(date: day, format: model.isToday(date: day) ? "MM.dd EEE" : "dd"))
-                            .font(.system(size: 15))
-                            .fontWeight(.semibold)
-                        
-                        Circle()
-                            .fill(.white)
-                            .frame(width: 8, height: 8)
-                            .opacity(model.isToday(date: day) ? 1 : 0)
-                        
-                    }
-                    .foregroundStyle(model.isToday(date: day) ? .primary : .secondary)
-                    .foregroundColor(model.isToday(date: day) ? .white : .gray)
-                    .frame(width: model.isToday(date: day) ? 140 : 30, height: 40)
-                    .background(
-                        
-                        ZStack{
-                            // MARK: Matched Geometry Effect
-                            if model.isToday(date: day) {
-                                Capsule()
-                                    .fill(Color("ThemeColor"))
+                        VStack(spacing: 10) {
+                            
+                            //날짜
+                            Text(model.extractDate(date: day, format: model.isToday(date: day) ? "MM.dd EEE" : "dd"))
+                                .font(.system(size: 15))
+                                .fontWeight(.semibold)
+                            
+                            Circle()
+                                .fill(.white)
+                                .frame(width: 8, height: 8)
+                                .opacity(model.isToday(date: day) ? 1 : 0)
+                            
+                        }
+                        .foregroundStyle(model.isToday(date: day) ? .primary : .secondary)
+                        .foregroundColor(model.isToday(date: day) ? .white : .gray)
+                        .frame(width: model.isToday(date: day) ? 120 : 30, height: 40)
+                        .background(
+                            
+                            ZStack{
+                                // MARK: Matched Geometry Effect
+                                if model.isToday(date: day) {
+                                    Capsule()
+                                        .fill(Color("ThemeColor"))
+                                }
+                            }
+                        )
+                        .contentShape(Capsule())
+                        .onTapGesture {
+                            // Updating current Day
+                            withAnimation {
+                                model.currentDay = day
                             }
                         }
-                    )
-                    .contentShape(Capsule())
-                    .onTapGesture {
-                        // Updating current Day
-                        withAnimation {
-                            model.currentDay = day
-                        }
+                        
                     }
-                    
                 }
+                
+                TaskView()
+                
+                //MARK: 한주 요약
+                
             }
-            
-            TaskView()
-            
-            //MARK: 한주 요약
-            
+            .padding()
         }
-        .padding()
         
     }
     
