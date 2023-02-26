@@ -14,14 +14,14 @@ struct StudyTimer: View {
             HStack(spacing:10){
                 Text("Study Timer")
                     .font(.title.bold())
-                    .foregroundColor(.white)
-                    .background{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color("ThemeColor"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .frame(width: 180)
-                        
-                    }
-                    .frame(alignment: .leading)
+                    .foregroundColor(Color("ThemeColor"))
+//                    .background{
+//                        RoundedRectangle(cornerRadius: 20)
+//                            .fill(LinearGradient(gradient: Gradient(colors: [Color("ThemeColor"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
+//                            .frame(width: 180)
+//
+//                    }
+//                    .frame(alignment: .leading)
             }
         }
             

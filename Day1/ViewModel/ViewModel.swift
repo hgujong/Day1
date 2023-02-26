@@ -12,7 +12,7 @@ class ViewModel: ObservableObject{
     @Published var currentTab: String = "Todo"
     @Published var content = ""
     @Published var date = Date()
-    @Published var color: String = "Yellow"
+    @Published var color: String = "Color 1"
     @Published var taskTitle: String = ""
     @Published var openEditTask: Bool = false
     
@@ -117,7 +117,7 @@ class ViewModel: ObservableObject{
     }
     
     func resetData(){
-        color = "Yellow"
+        color = "Color 1"
         date = Date()
         content = ""
         
@@ -125,7 +125,7 @@ class ViewModel: ObservableObject{
     
     func setupTask(){
         if let editTask = editTask{
-            color = editTask.color ?? "Yellow"
+            color = editTask.color ?? "Color 1"
             content = editTask.content ?? ""
             currentDay = editTask.deadline  ?? Date()
         }
